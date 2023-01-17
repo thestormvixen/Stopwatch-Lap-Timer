@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Use for styling buttons for CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Stopwatch</title>
+ </head>
+ <body>
+  <div class="overlay"></div>
+
+  <!-- Stopwatch Container -->
+   <main class="container">
+    <h1>Stopwatch</h1>
+    <h2>Lap Timer</h2>
+    <p class="lap-time">
+    <span id="minutes">00</span>: <span id="seconds">00</span>: <span id="tens">00</span>
+   </p>
+
+   <!-- Timer Buttons -->
+   <div class="controls">
+    <button id="start-btn" class="btn green btn-large">Start</button>
+    <button id="stop-btn" class="btn red btn-large">Stop</button>
+    <button id="reset-btn" class="btn btn-large">Reset</button>
+   </div>
+
+   <!-- Created Stop Laps -->
+   <ul id="laps" class="laps-container">
+    <!--<li>00:00:00</li>
+    <li>00:00:00</li>
+    <li>00:00:00</li>
+    <li>00:00:00</li>-->
+   </ul>
+   </main>
+   <script src="laps.js"></script>
+ </body>
+</html>

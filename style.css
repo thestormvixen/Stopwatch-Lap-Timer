@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+*,
+::before,
+::after {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+
+:root {
+ --dark-c: #444;
+ --gray-c: #f3f3f3;
+ --bg-c: #eee;
+ --border-radius: 25px;
+}
+
+body {
+ font-family: "Bebas Neue", cursive;
+ height: 100vh;
+ /* gives random image on each load for background */
+ background: url(https://source.unsplash.com/d3bYmnZ0ank) center/cover no-repeat;
+ position: relative;
+ z-index: 1;
+}
+
+.overlay {
+ position: absolute;
+ height: 100vh;
+ width: 100%;
+ background-color: rgba(0, 0, 0, 0.3);
+ z-index: 2;
+ top: -45px;
+ left: 0;
+}
+
+.container {
+ position: relative;
+ z-index: 3;
+ width: 400px;
+ margin: 30px auto;
+ text-align: center;
+}
+
+h1,
+h2 {
+ font-weight: 100;
+ font-size: 4.5em;
+ text-transform: uppercase;
+ color: var(--gray-c);
+ letter-spacing: 2px;
+}
+
+.btn {
+ border-radius: 50%;
+ height: 100px;
+ width: 100px;
+ font-weight: 500;
+ box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+.btn:active {
+ box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.3);
+ color: black;
+}
+
+.lap-time {
+ width: 400px;
+ font-size: 6rem;
+ background-color: var(--bg-c);
+ border-radius: var(--border-radius);
+ border: 1px solid var(--bg-c);
+ box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.1);
+ margin: auto;
+}
+
+#tens {
+ font-size: 4rem;
+}
+
+.controls {
+ margin-top: 20vh;
+ display: flex;
+ justify-content: space-between;
+ margin: 4rem auto;
+}
+
+.laps-container {
+ max-width: 400px;
+ margin: 4rem auto;
+ font-size: 2rem;
+}
+
+.laps-container span {
+ letter-spacing: 3px;
+}
+
+.laps-container li {
+ border-radius: var(--border-radius);
+}
+
+.laps-container li:nth-child(odd) {
+ background-color: var(--bg-c);
+}
+
+.laps-container li:nth-child(even) {
+ color: var(--gray-c);
+}
+
+/* Timer red dimming effect on Start to Stop */
+.dimming-effect {
+ animation: dimAnimation 1s linear infinite;
+}
+
+@keyframes dimAnimation {
+ 0% {
+  box-shadow: inset 0 0 10px 2px rgba(255, 0, 0, 0.3);
+  color: var(--dark-c);
+ }
+ 100% {
+  box-shadow: inset 0 0 80px 2px rgba(255, 0, 0, 0.1)
+  color: black;
+ }
+}
